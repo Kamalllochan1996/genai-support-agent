@@ -1,4 +1,4 @@
-from app.db.database import SessionLocal
+from app.db.database import Base, SessionLocal, engine
 from app.db.repositories.conversation_repository import (
     ConversationRepository,
 )
