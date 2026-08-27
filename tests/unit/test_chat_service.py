@@ -3,13 +3,26 @@ from fastapi.testclient import TestClient
 from app.api.dependencies import get_chat_service
 from app.api.main import app
 from app.api.services.chat_service import ChatService
-from app.api.services.fake_llm import FakeLLM
+
+
+class FakeRAGService:
+
+    def answer(
+        self,
+        question: str,
+        history: list[dict] | None = None,
+    ) -> dict:
+
+        return {
+            "question": question,
+            "answer": "This is a fake LLM response.",
+        }
 
 
 def get_test_chat_service() -> ChatService:
 
     return ChatService(
-        llm_service=FakeLLM(),
+        rag_service=FakeRAGService(),
     )
 
 
