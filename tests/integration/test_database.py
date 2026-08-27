@@ -1,4 +1,5 @@
-from app.db.database import Base, SessionLocal, engine
+from app.db.database import SessionLocal
+from app.db.init_db import init_db
 from app.db.repositories.conversation_repository import (
     ConversationRepository,
 )
@@ -8,6 +9,9 @@ from app.db.repositories.message_repository import (
 
 
 def test_conversation_persistence():
+
+    # Create database tables before running the test
+    init_db()
 
     db = SessionLocal()
 
