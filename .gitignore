@@ -1,0 +1,23 @@
+.env
+venv/
+.venv/
+
+__pycache__/
+*.pyc
+
+# Local vector database
+chroma_db/
+data/chroma_db/
+
+# Local application database
+*.db
+
+# Evaluation output
+evaluation_history.json
+evaluation_results.json
+
+# Pytest cache
+.pytest_cache/
+
+# IDE
+.vscode/

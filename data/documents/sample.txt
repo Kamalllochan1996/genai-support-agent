@@ -1,0 +1,10 @@
+Hello Kamal!
+
+This is a sample text file created for testing downloads.
+You can use this file to test your upload/download functionality.
+
+Employees are entitled to 12 casual leaves per year.
+
+Employees can apply for casual leave through the HR portal.
+
+Leave requests should be submitted before the start of the leave whenever possible.
