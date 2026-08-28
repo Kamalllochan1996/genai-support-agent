@@ -36,6 +36,8 @@ class Settings(BaseSettings):
         min_length=1,
     )
 
+    hf_token: str | None = None
+
     ollama_base_url: str = Field(
         default="http://localhost:11434",
         min_length=1,
